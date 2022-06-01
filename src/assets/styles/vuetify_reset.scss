@@ -1,0 +1,190 @@
+.v-application {
+  font-family: "Noto Sans KR", sans-serif !important;
+  line-height: normal !important;
+
+  .not-kr {
+    font-family: "Noto Sans", sans-serif !important;
+  }
+
+  .nanum-square {
+    font-family: "NanumSquareRoundOTF", sans-serif !important;
+  }
+
+  body,
+  html {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 10px;
+    // height: 100%;
+  }
+
+  a {
+    color: inherit !important;
+  }
+  ul {
+    padding: 0 !important;
+  }
+  p {
+    margin: 0 !important;
+  }
+  textarea,
+  input {
+    &::placeholder {
+      color: #adadad;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .v-list-item__title {
+    font-size: 12px !important;
+    line-height: normal !important;
+  }
+  .v-input__slot {
+    margin: 0 !important;
+  }
+  .v-slider--horizontal {
+    margin: 0 !important;
+  }
+
+  .company-write-footer,
+  .report-body {
+    .v-input--selection-controls {
+      margin: 0 !important;
+      padding: 0 !important;
+      .v-radio {
+        .v-label {
+          top: -1px !important;
+          font-size: 14px;
+          letter-spacing: -0.56px;
+          color: #464646;
+        }
+      }
+    }
+  }
+  .report-body {
+    .v-input--selection-controls {
+      .report-radio {
+        margin-bottom: 0 !important;
+        & + .report-radio {
+          margin-top: 18px !important;
+        }
+      }
+    }
+  }
+  .community-write {
+    .v-list-item__title {
+      font-size: 14px !important;
+      line-height: 20px !important;
+      letter-spacing: -0.39px !important;
+      color: #999 !important;
+    }
+    .v-select__slot label {
+      font-size: 14px !important;
+      letter-spacing: -0.56px !important;
+    }
+    .v-text-field--outlined {
+      fieldset {
+        border: 1px solid #ddd;
+      }
+      &.v-input--is-focused {
+        fieldset {
+          border: 1px solid #ddd;
+        }
+      }
+    }
+  }
+
+  .config-list {
+    .custom-switch {
+      padding: 0 !important;
+      margin: 0 !important;
+      .v-input--selection-controls__input {
+        margin: 0 !important;
+      }
+    }
+  }
+  .config-delete_user {
+    .v-select__slot label {
+      font-size: 14px !important;
+      letter-spacing: -0.56px !important;
+    }
+    .v-text-field--outlined {
+      fieldset {
+        border: 1px solid #ddd;
+      }
+      &.v-input--is-focused {
+        fieldset {
+          border: 1px solid #ddd;
+        }
+      }
+    }
+  }
+
+  .v-btn {
+    &.v-size--default {
+      min-width: unset !important;
+      padding: 0 !important;
+    }
+    &:hover::before {
+      opacity: 0 !important;
+    }
+  }
+
+  [role="menu"].v-menu__content {
+    border: 1px solid #f2f2f2;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.06) !important;
+
+    .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
+      color: #464646 !important;
+    }
+    .v-list.s-more-btn {
+      padding: 0 !important;
+      .v-list-item {
+        min-height: 37px !important;
+        padding: 0 19px !important;
+        font-size: 13px !important;
+        letter-spacing: -0.26px;
+        & + .v-list-item {
+          border-top: 1px solid #f2f2f2;
+        }
+      }
+    }
+  }
+  .comment-more-btn {
+    z-index: 10;
+  }
+  .v-skeleton-loader__image {
+    height: 100% !important;
+  }
+
+  .yyyy-mm-date {
+    .v-date-picker-table {
+      .v-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+      }
+      .v-date-picker-table__current {
+        border: none;
+      }
+    }
+  }
+
+  // 라디오 버튼 회색 원 처리
+  .report-body,
+  .company-write-footer {
+    .v-input--selection-controls__input {
+      .v-input--selection-controls__ripple {
+        display: none;
+      }
+    }
+  }
+
+  // 프로필 사진 업로드 스켈레톤 로더 둥글게
+  .user-weather-container {
+    .profile-skeleton-loader {
+      border-radius: 50%;
+    }
+  }
+}

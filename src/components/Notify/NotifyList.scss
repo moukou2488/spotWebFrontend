@@ -1,0 +1,62 @@
+.notify-list {
+  margin-top: 44px;
+  .overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .item-wrap {
+    .item-link {
+      display: flex;
+      width: 100%;
+      height: 90px;
+      padding: 16px 0 16px 16px;
+      .item-img-wrap {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        .item-img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+      .item-info {
+        width: 290px;
+        .item-source {
+          padding-left: 18px;
+          font-size: 14px;
+          letter-spacing: -0.56px !important;
+          line-height: 19px;
+          color: #1e1e1e;
+        }
+        .item-preview {
+          padding: 0px 18px;
+          margin: 2px 0 3px !important;
+          font-size: 12px;
+          line-height: 17px;
+          color: #464646;
+        }
+        .item-date {
+          padding-left: 18px;
+          font-size: 11px;
+          line-height: 15px;
+          color: #999;
+        }
+
+        @media screen and (max-width: 330px) {
+          width: 240px;
+        }
+      }
+      .item-new {
+        position: absolute;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        margin: 24px 20px 24px 0px;
+        border-radius: 50%;
+        background-color: $dodger_blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.config-list {
+  margin-top: 48px;
+
+  .list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    background-color: #fff;
+    .text-area {
+      padding-left: 16px;
+      flex: 1;
+      .main-text {
+        margin-bottom: 4px !important;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.56px;
+        color: #1e1e1e;
+      }
+      .sub-text {
+        max-width: 265px;
+        font-size: 12px;
+        letter-spacing: -0.48px;
+        color: #636363;
+      }
+      @media screen and (max-width: 330px) {
+        .sub-text {
+          max-width: 220px;
+        }
+      }
+    }
+    .switch-area {
+      padding: 5px 14px 0 0;
+    }
+    & + .list-item {
+      border-top: 1px solid #e9e9e9;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+.s-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 998;
+  width: 100%;
+  height: 100vh;
+  padding: 0 54px;
+  box-sizing: border-box;
+  background-color: rgba($color: #000, $alpha: 0.4);
+
+  .s-dialog-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 9px;
+
+    &.login,
+    &.confirm,
+    &.delete,
+    &.mail-auth-yet {
+      .dialog-headline {
+        padding: 22px 16px 20px;
+      }
+      .s-dialog-foot {
+        height: 44px;
+        .close_dialog_btn {
+          width: 100%;
+          height: 100%;
+          color: $dodger_blue;
+        }
+        .gray {
+          color: #797979 !important;
+        }
+      }
+    }
+    // 동행작성 - 지역선택
+    &.company-loc {
+      .dialog-headline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 55px;
+        width: 100%;
+        font-weight: 500;
+      }
+      .s-dialog-foot {
+        font-size: 16px;
+        letter-spacing: -0.38px;
+        .loc-list {
+          width: 100%;
+          .loc_list-item {
+            .close_dialog_btn {
+              padding: 11px 0;
+              width: 100%;
+              height: 100%;
+              color: #797979;
+              &.active {
+                color: $dodger_blue;
+              }
+            }
+
+            & + .loc_list-item {
+              border-top: 1px solid #adadad;
+            }
+          }
+        }
+      }
+    }
+
+    &.company-close,
+    &.company-block,
+    &.company-cancel,
+    &.logout,
+    &.company-write-cancel,
+    &.mail-auth-yet {
+      text-align: center;
+      .dialog-headline {
+        width: 100%;
+        padding: 19px 0 6px;
+      }
+      .dialog-body {
+        padding: 0 15px 13px;
+        width: 100%;
+        .body-text {
+          font-size: 13px;
+          color: #464646;
+          letter-spacing: -0.26px;
+        }
+      }
+    }
+
+    &.logout {
+      .dialog-body {
+        padding: 0 15px 23px;
+      }
+    }
+  }
+  .dialog-headline {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.54px;
+    color: #464646;
+  }
+
+  .s-dialog-body {
+    padding: 0 14px !important;
+  }
+
+  .s-dialog-foot {
+    display: flex;
+    width: 100%;
+    border-top: 0.5px solid #adadad;
+    font-size: 16px;
+    letter-spacing: -0.38px;
+    font-weight: 500;
+
+    &.two {
+      .foot-btn {
+        width: 50%;
+        height: 44px;
+        text-align: center;
+        color: #797979;
+        &.major {
+          color: $dodger_blue;
+        }
+        & + .foot-btn {
+          border-left: 1px solid #adadad;
+        }
+      }
+    }
+  }
+}

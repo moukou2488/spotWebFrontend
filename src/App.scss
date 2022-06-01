@@ -1,0 +1,272 @@
+// Noto Sans KR 100, 700
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500;700&display=swap");
+// Noto Sans 400, 700
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+body,
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 10px;
+  letter-spacing: -0.48px;
+  // height: 100%;
+  &.modal-on {
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden !important;
+    touch-action: none;
+  }
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+.v-application {
+  position: relative;
+
+  .view {
+    position: relative;
+    .pd-row-14 {
+      padding: 0 14px !important;
+    }
+  }
+
+  .top-bar + [role="main"] {
+    margin-top: 48px;
+    padding: 0 14px;
+
+    &.custom-pd {
+      padding: 0;
+    }
+  }
+
+  .input-box {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+
+    &::placeholder {
+      color: #adadad;
+    }
+    &.active {
+      border: 1px solid $input_active;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+
+    &.fill {
+      background-color: $dodger_blue;
+      color: #fff !important;
+      &.salmon {
+        background-color: $salmon;
+      }
+    }
+
+    &.fill_disabled {
+      background-color: #c2c2c2;
+      color: #fff !important;
+    }
+
+    &.flat {
+      border: 1px solid $dodger_blue;
+      color: $dodger_blue !important;
+    }
+
+    &.flat_disabled {
+      border: 1px solid #999999;
+      color: #999999;
+    }
+
+    &.large {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 9px 0;
+      letter-spacing: -0.28px;
+    }
+
+    &.regular {
+      width: 170px;
+      height: 40px;
+      padding: 9px 38px 11px;
+    }
+    & + .btn {
+      margin-top: 8px;
+    }
+  }
+
+  // 회원가입, 로그인시 사용되는 label 요소들
+  .custom-checkbox-wrap {
+    position: relative;
+    [type="checkbox"].custom-checkbox {
+      display: none;
+
+      &.active + .custom-label:before {
+        background: url("~@/assets/images/checkbox_active.png") center;
+        background-size: cover;
+      }
+
+      &:checked + .custom-label:before {
+        background: url("~@/assets/images/checkbox_active.png") center;
+        background-size: cover;
+      }
+
+      &:checked + .custom-label.agree:before {
+        background: url("~@/assets/images/Btn_agree_active3x.png") center;
+        background-size: cover;
+      }
+    }
+
+    .custom-label {
+      display: inline-flex;
+      align-items: center;
+      &:before {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        margin-right: 10px;
+        vertical-align: top;
+        background: url("~@/assets/images/checkbox_inactive.png") center;
+        background-size: cover;
+        content: "";
+      }
+      &.agree {
+        &:before {
+          margin-right: 12px;
+          background: url("~@/assets/images/Btn_agree_inactive3x.png") center;
+          background-size: cover;
+        }
+      }
+
+      &:after {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 4px;
+        color: $dodger_blue;
+      }
+
+      &.required {
+        &:after {
+          content: "(필수)";
+        }
+      }
+
+      &.option {
+        &:after {
+          content: "(선택)";
+        }
+      }
+    }
+  }
+
+  // top-bar의 위치에 같은 높이의 토스트 알람창
+  .toast-alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 48px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 48px;
+    background-color: #000;
+    opacity: 0.7;
+
+    .alert-text {
+      font-size: 13px;
+      line-height: 18px;
+      color: #fff;
+    }
+  }
+  // 하단 버튼 위의 위치의 토스트 알림창
+  .toast-alert-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 66px;
+    left: 14px;
+    right: 14px;
+    //z-index: 10;
+    height: 48px;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    border-radius: 4px;
+
+    .alert-text {
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: -0.72px;
+      color: #fff;
+    }
+  }
+
+  .custom-br {
+    background-color: #f0f0f0;
+    height: 8px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .only-se {
+    display: none;
+  }
+  @media screen and (max-width: 330px) {
+    .headline-text {
+      max-width: 200px !important;
+      font-size: 16px !important;
+    }
+    .only-se {
+      display: block;
+    }
+  }
+  .empty-checkbox-wrap {
+    position: relative;
+    // padding-top: 17px;
+    [type="checkbox"].empty-checkbox {
+      display: none;
+
+      &:checked + .empty-label:before {
+        background: url("~@/assets/images/check_b_active.png") center;
+        background-size: cover;
+      }
+    }
+
+    .empty-label {
+      display: inline-flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: -0.84px;
+      &:before {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+        vertical-align: top;
+        background: url("~@/assets/images/check_b_inactive.png") center;
+        background-size: cover;
+        content: "";
+      }
+
+      &:after {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 4px;
+        color: $dodger_blue;
+      }
+    }
+  }
+}

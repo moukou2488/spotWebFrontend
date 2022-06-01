@@ -1,0 +1,67 @@
+.input-item {
+  .input-label {
+    font-size: 12px;
+    line-height: 18px;
+    color: #464646;
+
+    &.required {
+      &:after {
+        display: inline-block;
+        width: 9px;
+        height: 17px;
+        background: url("~@/assets/images/ic_necessary@3x.png") center;
+        background-size: cover;
+        content: "";
+      }
+    }
+  }
+  .input-item-wrap {
+    display: flex;
+    margin-top: 9px;
+    .input-box {
+      padding: 13px 0 13px 10px;
+      flex: 1;
+      font-size: 12px;
+      width: 100%;
+      & + .confirm-btn {
+        margin-left: 6px;
+      }
+      @media screen and (max-width: 330px) {
+        font-size: 11px;
+      }
+    }
+    // 확인 버튼
+    .confirm-btn {
+      padding: 13px;
+      border: 1px solid $dodger_blue;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $dodger_blue;
+      &:disabled {
+        border: 1px solid #999;
+        color: #999;
+      }
+    }
+  }
+  .alert-msg {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+    color: #ef8181;
+  }
+  .alert-msg-blue {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+    color: $dodger-blue;
+  }
+
+  & + .input-item {
+    margin-top: 21px;
+  }
+}
